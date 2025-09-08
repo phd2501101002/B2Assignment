@@ -4,6 +4,11 @@
 
 using namespace std;
 
+// TODO: Define TaylorTerm struct
+// struct TaylorTerm {
+
+// };
+
 void print_taylor_term(int index, int order, double coeff, double value) {
     cout << "Term[" << index << "]: "
          << "order=" << order << ", "
@@ -35,18 +40,16 @@ int main(int argc, char* argv[]) {
     int terms;
     input >> x >> terms;
 
+    // TODO: Create an array of TaylorTerm
+
     double approximation = 0.0;
 
-    for (int k = 0; k < terms; k++) {
-        int order = 2 * k;  // even powers for cos
-        double coeff = (k % 2 == 0 ? 1 : -1);  // (-1)^k
-        double value = coeff * pow(x, order) / tgamma(order + 1); // factorial = Γ(order+1)
+    // TODO: Compute each Taylor term and store in array
+    // for (int k = 0; k < terms; k++) {
+    // }
 
-        print_taylor_term(k, order, coeff, value);
-        approximation += value;
-    }
+    // TODO: Print final approximation
 
-    print_taylor_result("cos", x, terms, approximation);
 
     return 0;
 }
